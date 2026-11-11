@@ -1,0 +1,16 @@
+# eksctl cluster config: equivalent to the one-line `eksctl create cluster` in the README.
+# Create:  eksctl create cluster -f eks-cluster.yaml
+# Delete:  eksctl delete cluster -f eks-cluster.yaml
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: MCP-test-cluster
+  region: ap-south-1
+
+managedNodeGroups:
+  - name: demo-nodes
+    instanceType: t3a.medium   # max 17 pods per node (VPC CNI IP limit), so the Pending-pod demo is easy to hit
+    desiredCapacity: 1
+    minSize: 1
+    maxSize: 3

@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620" role="img" aria-label="Kubernetes MCP with Claude Code: Claude Code in VS Code (MCP client) calls the Kubernetes MCP server over stdio, which calls the Amazon EKS Kubernetes API using the local kubeconfig, and returns results back to Claude Code">
+  <style>
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; text-anchor: middle; fill: #111111; }
+    .h1 { font-size: 19px; font-weight: 600; }
+    .title { font-size: 17px; font-weight: 600; }
+    .pill { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; }
+    .sub { font-size: 13px; fill: #374151; }
+    .mono { font-size: 12px; fill: #374151; font-family: Consolas, "SFMono-Regular", Menlo, monospace; }
+    .muted { font-size: 12px; fill: #6B7280; }
+    .li { font-size: 13px; fill: #1F2937; text-anchor: start; }
+    .num { font-size: 13px; font-weight: 700; fill: #FFFFFF; }
+    .lbl { font-size: 12px; fill: #374151; }
+    .arrow { fill: none; stroke: #4B5563; stroke-width: 1.6; }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#4B5563"/>
+    </marker>
+  </defs>
+
+  <!-- container -->
+  <rect x="2" y="2" width="1036" height="616" rx="14" fill="#FCFCFC" stroke="#E5E5E5"/>
+  <text class="h1" x="520" y="34">Kubernetes MCP + Claude Code on Amazon EKS</text>
+
+  <!-- ============ YOUR MACHINE ============ -->
+  <rect x="20" y="70" width="270" height="370" rx="12" fill="#EFF6FF" stroke="#93C5FD"/>
+  <rect x="85" y="56" width="140" height="28" rx="6" fill="#FFFFFF" stroke="#2563EB"/>
+  <text class="pill" x="155" y="75" fill="#1D4ED8">YOUR MACHINE</text>
+
+  <!-- VS Code tile -->
+  <rect x="137" y="96" width="36" height="36" rx="8" fill="#0078D4"/>
+  <text x="155" y="120" style="font-size:15px;font-weight:700;fill:#FFFFFF">{ }</text>
+  <text class="title" x="155" y="156">VS Code</text>
+
+  <!-- Claude Code (MCP client) -->
+  <rect x="40" y="170" width="230" height="100" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <g stroke="#D97757" stroke-width="3" stroke-linecap="round">
+    <path d="M155 186v24M143 198h24M146.5 189.5l17 17M163.5 189.5l-17 17"/>
+  </g>
+  <text class="title" x="155" y="236">Claude Code</text>
+  <text class="sub" x="155" y="256" style="fill:#C2410C;font-weight:600">(MCP Client)</text>
+
+  <rect x="40" y="288" width="230" height="136" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text class="li" x="54" y="314">• Ask in plain English</text>
+  <text class="li" x="54" y="338">• Claude picks the MCP tools</text>
+  <text class="li" x="54" y="362">• You approve each tool call</text>
+  <text class="li" x="54" y="386">• Results in the chat panel</text>
+  <text class="li" x="54" y="410">• Works in VS Code or terminal</text>
+
+  <!-- ============ MCP SERVER ============ -->
+  <rect x="390" y="70" width="260" height="370" rx="12" fill="#F0FDF4" stroke="#86EFAC"/>
+  <rect x="450" y="56" width="140" height="28" rx="6" fill="#FFFFFF" stroke="#16A34A"/>
+  <text class="pill" x="520" y="75" fill="#15803D">MCP SERVER</text>
+
+  <!-- k8s-style wheel -->
+  <polygon points="520,96 537.2,104.3 541.4,122.9 529.5,137.8 510.5,137.8 498.6,122.9 502.8,104.3" fill="#326CE5"/>
+  <g stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none">
+    <circle cx="520" cy="118" r="5"/>
+    <path d="M520 113V104M524 115l7-5M525 119l7 2M522 123l4 6M518 123l-4 6M515 119l-7 2M516 115l-7-5"/>
+  </g>
+  <text class="title" x="520" y="166">Kubernetes MCP Server</text>
+  <text class="mono" x="520" y="188">kubernetes-mcp-server</text>
+  <text class="sub" x="520" y="208" style="fill:#15803D">local process · npx · stdio</text>
+
+  <rect x="410" y="226" width="220" height="198" rx="8" fill="#FFFFFF" stroke="#BBF7D0"/>
+  <text class="li" x="424" y="254">• Exposes ~22 K8s tools</text>
+  <text class="li" x="424" y="280">• pods · resources · events</text>
+  <text class="li" x="424" y="306">• logs · exec · top · helm</text>
+  <text class="li" x="424" y="332">• Uses your kubeconfig</text>
+  <text class="li" x="424" y="358">• Optional safety flags:</text>
+  <text class="mono" x="438" y="382" style="text-anchor:start">--read-only</text>
+  <text class="mono" x="438" y="402" style="text-anchor:start">--disable-destructive</text>
+
+  <!-- ============ AWS CLOUD ============ -->
+  <rect x="750" y="70" width="270" height="370" rx="12" fill="#FFF7ED" stroke="#FDBA74"/>
+  <rect x="815" y="56" width="140" height="28" rx="6" fill="#FFFFFF" stroke="#EA580C"/>
+  <text class="pill" x="885" y="75" fill="#C2410C">AWS CLOUD</text>
+
+  <text class="title" x="885" y="112">Amazon EKS</text>
+  <text class="mono" x="885" y="134">MCP-test-cluster · ap-south-1</text>
+
+  <rect x="766" y="150" width="238" height="190" rx="10" fill="#FFFFFF" stroke="#FB923C" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="885" y="174" style="font-size:13px;font-weight:600">Kubernetes cluster</text>
+  <rect x="778" y="188" width="103" height="30" rx="6" fill="#FFF7ED" stroke="#FDBA74"/>
+  <text class="sub" x="829.5" y="208">Deployments</text>
+  <rect x="891" y="188" width="103" height="30" rx="6" fill="#FFF7ED" stroke="#FDBA74"/>
+  <text class="sub" x="942.5" y="208">Pods</text>
+  <rect x="778" y="226" width="103" height="30" rx="6" fill="#FFF7ED" stroke="#FDBA74"/>
+  <text class="sub" x="829.5" y="246">Services</text>
+  <rect x="891" y="226" width="103" height="30" rx="6" fill="#FFF7ED" stroke="#FDBA74"/>
+  <text class="sub" x="942.5" y="246">Events</text>
+  <rect x="778" y="268" width="216" height="58" rx="6" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text x="886" y="291" style="font-size:13px;font-weight:600">Managed node group</text>
+  <text class="muted" x="886" y="312">t3a.medium · scaled 1 → 2 nodes</text>
+
+  <text class="muted" x="885" y="370">Auth: kubeconfig →</text>
+  <text class="mono" x="885" y="390">aws eks get-token (IAM)</text>
+  <text class="muted" x="885" y="418">nginx exposed on NodePort 30080</text>
+
+  <!-- ============ ARROWS ============ -->
+  <!-- 1: client -> server -->
+  <circle cx="340" cy="140" r="12" fill="#2563EB"/>
+  <text class="num" x="340" y="145">1</text>
+  <text class="lbl" x="340" y="172">MCP tool call</text>
+  <path class="arrow" d="M294 190H384" marker-end="url(#ah)"/>
+  <!-- 4: server -> client -->
+  <circle cx="340" cy="282" r="12" fill="#7C3AED"/>
+  <text class="num" x="340" y="287">4</text>
+  <text class="lbl" x="340" y="314">tool result</text>
+  <path class="arrow" d="M386 332H296" marker-end="url(#ah)"/>
+  <!-- 2: server -> EKS -->
+  <circle cx="700" cy="140" r="12" fill="#16A34A"/>
+  <text class="num" x="700" y="145">2</text>
+  <text class="lbl" x="700" y="172">K8s API call</text>
+  <path class="arrow" d="M654 190H744" marker-end="url(#ah)"/>
+  <!-- 3: EKS -> server -->
+  <circle cx="700" cy="282" r="12" fill="#EA580C"/>
+  <text class="num" x="700" y="287">3</text>
+  <text class="lbl" x="700" y="314">API response</text>
+  <path class="arrow" d="M746 332H656" marker-end="url(#ah)"/>
+
+  <!-- ============ FLOW SUMMARY ============ -->
+  <rect x="20" y="462" width="1000" height="140" rx="12" fill="#FAF5FF" stroke="#C4B5FD"/>
+  <rect x="36" y="476" width="124" height="24" rx="5" fill="#FFFFFF" stroke="#7C3AED"/>
+  <text x="98" y="493" style="font-size:12px;font-weight:700;letter-spacing:0.06em;fill:#6D28D9">FLOW SUMMARY</text>
+
+  <g stroke="#C4B5FD" stroke-dasharray="4 4"><path d="M272 512v76M518 512v76M764 512v76"/></g>
+
+  <circle cx="50" cy="526" r="12" fill="#2563EB"/><text class="num" x="50" y="531">1</text>
+  <text class="li" x="70" y="530">You ask Claude Code (VS Code</text>
+  <text class="li" x="70" y="550">or terminal) in plain English.</text>
+
+  <circle cx="296" cy="526" r="12" fill="#16A34A"/><text class="num" x="296" y="531">2</text>
+  <text class="li" x="316" y="530">Claude Code calls a Kubernetes</text>
+  <text class="li" x="316" y="550">MCP tool once you approve it;</text>
+  <text class="li" x="316" y="570">the server calls the EKS API.</text>
+
+  <circle cx="542" cy="526" r="12" fill="#EA580C"/><text class="num" x="542" y="531">3</text>
+  <text class="li" x="562" y="530">EKS authenticates via IAM</text>
+  <text class="li" x="562" y="550">(kubeconfig) and returns the</text>
+  <text class="li" x="562" y="570">pods, events or resources.</text>
+
+  <circle cx="788" cy="526" r="12" fill="#7C3AED"/><text class="num" x="788" y="531">4</text>
+  <text class="li" x="808" y="530">The result returns over MCP;</text>
+  <text class="li" x="808" y="550">Claude explains it and</text>
+  <text class="li" x="808" y="570">proposes the next step.</text>
+</svg>

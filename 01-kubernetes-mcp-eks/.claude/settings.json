@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__kubernetes__configuration_view",
+      "mcp__kubernetes__namespaces_list",
+      "mcp__kubernetes__events_list",
+      "mcp__kubernetes__pods_list",
+      "mcp__kubernetes__pods_list_in_namespace",
+      "mcp__kubernetes__pods_get",
+      "mcp__kubernetes__pods_log",
+      "mcp__kubernetes__pods_top",
+      "mcp__kubernetes__resources_list",
+      "mcp__kubernetes__resources_get"
+    ],
+    "ask": [
+      "mcp__kubernetes__resources_create_or_update",
+      "mcp__kubernetes__resources_delete",
+      "mcp__kubernetes__pods_delete",
+      "mcp__kubernetes__pods_exec",
+      "mcp__kubernetes__pods_run"
+    ]
+  }
+}
