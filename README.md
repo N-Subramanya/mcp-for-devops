@@ -11,13 +11,9 @@ Each project has an architecture diagram, step-by-step setup, a real demo run, a
 
 ## What is MCP, in one picture
 
-```mermaid
-flowchart LR
-    U([You]) -->|plain English| C["MCP client<br/>Claude Code"]
-    C -->|"tool call (JSON-RPC)"| S["MCP server<br/>e.g. Kubernetes"]
-    S -->|native API| T[("Target system<br/>EKS · AWS · GitHub …")]
-    T --> S --> C --> U
-```
+<p align="center">
+  <img src="mcp-overview.svg" alt="You → MCP client (Claude Code) → MCP server (e.g. Kubernetes) → target system (EKS, AWS, GitHub), with results flowing back" width="100%">
+</p>
 
 An **MCP server** turns an API (Kubernetes, AWS, a database…) into a set of typed *tools*. An **MCP client** such as
 Claude Code discovers those tools and calls them for you, after you approve each call.

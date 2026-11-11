@@ -186,11 +186,6 @@ claude mcp add k8s-readonly --scope user -- cmd /c npx -y kubernetes-mcp-server@
 | Pod `Pending: Too many pods` | Scale the node group (step 6) or use a larger instance type |
 | Endpoint times out | Open the NodePort in the **node** security group and use the node's *external* IP |
 
-## Notes
-
-The first version of this lab used GitHub Copilot agent mode. The MCP server works with any client, so moving to Claude Code
-needed only a different registration step (`claude mcp add` / `.mcp.json`). The server, cluster and prompts stayed the same.
-
 ---
 
 Part of [**mcp-for-devops**](../) · [N-Subramanya](https://github.com/N-Subramanya)

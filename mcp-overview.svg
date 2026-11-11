@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="200" viewBox="0 0 960 200" role="img" aria-label="MCP overview: you ask in plain English, the MCP client Claude Code sends a JSON-RPC tool call to an MCP server such as Kubernetes, which calls the target system's native API; results flow back the same way">
+  <style>
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; text-anchor: middle; fill: #111111; }
+    .title { font-size: 15px; font-weight: 600; }
+    .sub { font-size: 12px; fill: #4B5563; }
+    .lbl { font-size: 12px; fill: #374151; }
+    .back { font-size: 11px; fill: #6B7280; }
+    .arrow { fill: none; stroke: #4B5563; stroke-width: 1.6; }
+    .ret { fill: none; stroke: #9CA3AF; stroke-width: 1.4; stroke-dasharray: 5 4; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#4B5563"/>
+    </marker>
+    <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#9CA3AF"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="2" width="956" height="196" rx="14" fill="#FCFCFC" stroke="#E5E5E5"/>
+
+  <!-- You -->
+  <rect x="24" y="60" width="140" height="70" rx="35" fill="#F5F3FF" stroke="#A78BFA"/>
+  <text class="title" x="94" y="101">You</text>
+
+  <!-- Client -->
+  <rect x="264" y="52" width="170" height="86" rx="10" fill="#FFF7ED" stroke="#D97757"/>
+  <text class="sub" x="349" y="82" style="fill:#C2410C;font-weight:600">MCP CLIENT</text>
+  <text class="title" x="349" y="106">Claude Code</text>
+  <text class="sub" x="349" y="126">VS Code · terminal</text>
+
+  <!-- Server -->
+  <rect x="534" y="52" width="170" height="86" rx="10" fill="#F0FDF4" stroke="#16A34A"/>
+  <text class="sub" x="619" y="82" style="fill:#15803D;font-weight:600">MCP SERVER</text>
+  <text class="title" x="619" y="106">e.g. Kubernetes</text>
+  <text class="sub" x="619" y="126">typed tools</text>
+
+  <!-- Target (cylinder) -->
+  <path d="M804 62v66c0 9 29 16 66 16s66-7 66-16V62" fill="#EFF6FF" stroke="#2563EB"/>
+  <ellipse cx="870" cy="62" rx="66" ry="14" fill="#DBEAFE" stroke="#2563EB"/>
+  <text class="sub" x="870" y="98" style="fill:#1D4ED8;font-weight:600">TARGET SYSTEM</text>
+  <text class="title" x="870" y="120" style="font-size:13px">EKS · AWS · GitHub</text>
+
+  <!-- forward -->
+  <path class="arrow" d="M166 85H260" marker-end="url(#a)"/>
+  <text class="lbl" x="213" y="74">plain English</text>
+  <path class="arrow" d="M436 85H530" marker-end="url(#a)"/>
+  <text class="lbl" x="483" y="74">tool call</text>
+  <path class="arrow" d="M706 85H800" marker-end="url(#a)"/>
+  <text class="lbl" x="753" y="74">native API</text>
+
+  <!-- return -->
+  <path class="ret" d="M260 112H168" marker-end="url(#r)"/>
+  <text class="back" x="213" y="130">answer</text>
+  <path class="ret" d="M530 112H438" marker-end="url(#r)"/>
+  <text class="back" x="483" y="130">JSON-RPC result</text>
+  <path class="ret" d="M800 112H708" marker-end="url(#r)"/>
+  <text class="back" x="753" y="130">data</text>
+
+  <text class="sub" x="480" y="178">You approve each tool call before it runs.</text>
+</svg>
